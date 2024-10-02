@@ -1,0 +1,107 @@
+.directionTable{
+    display: grid;
+    align-content: center;
+    background-image: url(../images/imgDirectionContainer.png);
+    background-size: 100% 80%;
+    background-repeat: no-repeat;
+    padding: 10px 10px;
+}
+
+.directionTable button{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border-style: none;
+}
+
+.directionTable button:hover{
+    transition:0.4s ease;
+    transform: scale(1.1);
+    border-color:rgb(22, 13, 104) ;
+    background-color: rgb(22, 13, 104) ;
+}
+
+
+.directionTable__container{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    justify-items: center;
+    gap: 10px;
+
+
+
+    padding: 10px;
+}
+
+
+.directionTable__leftRight{
+
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
+
+
+/* APAGAR BOTON DE DIRECCION */
+
+.directionTable__upOff{
+
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.directionTable__downOff{
+
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+.directionTable__leftOff{
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+.directionTable__rightOff{
+
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* ENCENDER BOTON DE DIRECCION */
+
+.directionTable__upOn{
+    opacity: 1;
+    background-image: url(../images/arrowUp.png);
+    background-size: contain;
+    background-color: rgb(85, 14, 14);
+}
+
+
+.directionTable__downOn{
+    opacity: 1;
+    background-image: url(../images/arrowDown.png);
+    background-size: contain;
+    background-color: rgb(85, 14, 14);
+}
+
+.directionTable__leftOn{
+    opacity: 1;
+    background-image: url(../images/arrowLeft.png);
+    background-size: contain;
+    background-color: rgb(85, 14, 14);
+}
+
+.directionTable__rightOn{
+    opacity: 1;
+    background-image: url(../images/arrowRight.png);
+    background-size: contain;
+    background-color: rgb(85, 14, 14);
+
+}
+
+

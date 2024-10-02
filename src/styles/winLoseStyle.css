@@ -1,0 +1,46 @@
+.WinLoseContainerOn{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+    pointer-events: unset;
+}
+
+.WinLoseContainerOn__grid{
+    display: grid;
+    justify-items: center;
+}
+
+.WinLoseContainerOn__image{
+    object-fit: contain;
+    width: 60%;
+}
+
+.WinLoseContainerOn__buttonlose{
+    color: #fff;
+    background: radial-gradient(circle,#550c0c ,#290303,#140000);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #a87309;
+    border-width: 1px;
+    width: 20%;
+    padding: 2em 0;
+}
+
+.WinLoseContainerOn__buttonwin{
+    color: #fff;
+    background: radial-gradient(circle,#0d0d69,#070731 ,#070718);
+    border-style: solid;
+    border-radius: 20px;
+    border-color: #a87309;
+    border-width: 1px;
+    width: 20%;
+    padding: 2em 0;
+}
