@@ -6,7 +6,7 @@ let randomQuestion = Math.floor(Math.random()*3);
 
 export const ButtonBoxes = () => {
 
-  const { setModalContent, setModalOn, currentBoxButtonsOn, currentBoxButtonsResolved } = useContext(MyContext);
+  const { setModalControl, currentBoxButtonsOn, currentBoxButtonsResolved } = useContext(MyContext);
 
   const onOffResolvedClassName = (e)=>{
 
@@ -29,8 +29,7 @@ export const ButtonBoxes = () => {
 
     const { question, answers, correctAnswer, id, newButtonBox } = e; 
 
-    setModalContent( { answers, correctAnswer, question, id, newButtonBox } );
-    setModalOn(true)
+    setModalControl({ modalContent: {answers, correctAnswer, question, id, newButtonBox}, modalOn:true } );
   };
 
   return (
@@ -43,10 +42,10 @@ export const ButtonBoxes = () => {
             <div className ='tribiaTable__BoxButtonContainer' key = { e[randomQuestion].id }>
 
               <button 
-                      onClick = {()=> onClickShowTribia( e[randomQuestion] )}
-                      className = { `tribiaTable__${onOffResolvedClassName(e[randomQuestion].id)}`}
-                      ></button>
-
+                onClick = {()=> onClickShowTribia( e[randomQuestion] )}
+                className = { `tribiaTable__${onOffResolvedClassName(e[randomQuestion].id)}`}
+              ></button>
+              
             </div>
             ) }
 

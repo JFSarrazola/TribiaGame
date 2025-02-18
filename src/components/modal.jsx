@@ -4,13 +4,15 @@ import { MyContext } from "../context/myContext";
 
 export const Modal = () => {
 
-  const {   modalContent, modalOn, setModalOn, 
+  const {   modalControl,setModalControl, 
             setDirections, playersLife, 
             setPlayersLife, setWinnScreenOn,
             setCurrentBoxButtonsOn,
             currentBoxButtonsResolved,
             setCurrentBoxButtonsResolved,
             currentBoxButtonsOn } = useContext(MyContext);
+
+  const{modalContent,modalOn}= modalControl
 
   const{ question, answers, correctAnswer, id } = modalContent;
 
@@ -37,7 +39,7 @@ export const Modal = () => {
         setLockScreen(true);
         setTimeout(() => {
           setWinnScreenOn(true);
-          setModalOn(false);
+          setModalControl({...modalControl,modalOn:false})
           setLockScreen(false);
         }, 1000)
       }
@@ -46,7 +48,7 @@ export const Modal = () => {
         target.style.background = 'radial-gradient(circle,#126319 ,#0f3012,#0a160b)';
         setLockScreen(true)
         setTimeout(() => {
-          setModalOn(false);
+          setModalControl({...modalControl,modalOn:false});
           setCurrentBoxButtonsResolved( {...currentBoxButtonsResolved,...currentBoxButtonsOn})
           dispatch({ type: id });
           setCurrentBoxButtonsOn({})
@@ -60,7 +62,7 @@ export const Modal = () => {
       setLockScreen(true)
       setTimeout(() => {
         setPlayersLife(playersLife - 1);
-        setModalOn(false);
+        setModalControl({...modalControl,modalOn:false});
         setLockScreen(false)
     }, 1000); 
 
@@ -71,23 +73,21 @@ export const Modal = () => {
     
     modalOn&&
     <>
-        { lockScreen && <div className="modalOn__block"></div>}
+        { lockScreen && <div className="modalOn__block"></div> }
         <div className = 'modalOn'>
+          <h3 className="modalOn__questionBox"> { question } </h3> 
 
-        <h3 className="modalOn__questionBox"> { question } </h3> 
+          <div className="modalOn__answerButtons">
 
-        <div className="modalOn__answerButtons">
-
-            { answers.map( ( mapAnswer ) => 
-            
-            <button key = { mapAnswer } 
-                    onClick = { checkAnswer }
-                    className="modalOn__button"> { mapAnswer } 
-            </button>
-            
-            ) }
-
-        </div>
+              { answers.map( ( mapAnswer ) => 
+              
+              <button key = { mapAnswer } 
+                      onClick = { checkAnswer }
+                      className="modalOn__button"> { mapAnswer } 
+              </button>
+              
+              ) }
+          </div>
         </div>
     </>
   )

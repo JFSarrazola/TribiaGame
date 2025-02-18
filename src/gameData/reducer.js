@@ -1,7 +1,7 @@
 export const reducer = ( state, action )=>{
     // Reducer encargado de administrar la cantidad de direcciones a las que se puede desplazar desde la casilla actual
     // tambien especifica cada casilla a la cual se puede desplazar.
-    // La propiedad NewButtonBox se usa solo en las casillas con una unica dirección, las propiedades
+    // La propiedad newButtonBox se usa solo en las casillas con una unica dirección, las propiedades
     // downButtonBox,rightButtonBox,upButtonBox,leftButtonBox se usan solo en las casillas con 2 o más direcciónes
 
     switch( action.type ){
