@@ -6,7 +6,9 @@ let randomQuestion = Math.floor(Math.random()*3);
 
 export const ButtonBoxes = () => {
 
-  const { setModalControl, currentBoxButtonsOn, currentBoxButtonsResolved } = useContext(MyContext);
+  const { setModalControl, boxButtonStyle} = useContext(MyContext);
+
+  const {currentBoxButtonsOn,currentBoxButtonsResolved} = boxButtonStyle
 
   const onOffResolvedClassName = (e)=>{
 

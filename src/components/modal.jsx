@@ -7,12 +7,14 @@ export const Modal = () => {
   const {   modalControl,setModalControl, 
             setDirections, playersLife, 
             setPlayersLife, setWinnScreenOn,
-            setCurrentBoxButtonsOn,
-            currentBoxButtonsResolved,
-            setCurrentBoxButtonsResolved,
-            currentBoxButtonsOn } = useContext(MyContext);
+            boxButtonStyle,
+            setBoxButtonStyle
+        } = useContext(MyContext);
+    
 
-  const{modalContent,modalOn}= modalControl
+  const{modalContent,modalOn} = modalControl;
+
+  const {currentBoxButtonsOn,currentBoxButtonsResolved} = boxButtonStyle
 
   const{ question, answers, correctAnswer, id } = modalContent;
 
@@ -49,9 +51,8 @@ export const Modal = () => {
         setLockScreen(true)
         setTimeout(() => {
           setModalControl({...modalControl,modalOn:false});
-          setCurrentBoxButtonsResolved( {...currentBoxButtonsResolved,...currentBoxButtonsOn})
+          setBoxButtonStyle({currentBoxButtonsOn:{},currentBoxButtonsResolved:{...currentBoxButtonsResolved,...currentBoxButtonsOn}})
           dispatch({ type: id });
-          setCurrentBoxButtonsOn({})
           setLockScreen(false)
         }, 1000)
       }

@@ -16,14 +16,15 @@ export const MyProvider = ({ children }) => {
     const [ winnScreenOn, setWinnScreenOn ] = useState( false );
     // este estado gestiona el momento en que se puede dibujar el componente que informa al jugador si ganó o perdio el juego.
 
-    const [ currentBoxButtonsOn, setCurrentBoxButtonsOn ] = useState( { 'obj1_option1': true,
-                                                                        'obj1_option2': true,
-                                                                        'obj1_option3': true,});
-    // este estado contiene el id del ButtonBoxe que actualmente esta activo y con el cual el jugador puede interactuar.
 
-    const [ currentBoxButtonsResolved, setCurrentBoxButtonsResolved] = useState({})
-    // este estado contiene los id de los ButtonBoxes que ya han sido usados por el jugador, solo se agregara el id
-    // si el jugador contesta de manera correcta.
+    const [ boxButtonStyle, setBoxButtonStyle] = useState({ currentBoxButtonsOn:{
+                                                            'obj1_option1': true,
+                                                            'obj1_option2': true,
+                                                            'obj1_option3': true },
+                                                            currentBoxButtonsResolved:{}})
+    //  Este estado se encarga de guardar el boton que esta activo actualmente(currentBoxButtonsOn) el cual siempre es solo 1 y 
+    //  los botones que ya se han usado (currentBoxButtonsResolved) estos ultimos se bloquearan para evitar que sean usados otra vez
+                                                     
 
  
     const [ playersLife, setPlayersLife ] = useState( 3 );
@@ -37,9 +38,8 @@ export const MyProvider = ({ children }) => {
         modalControl, setModalControl,
         directions, setDirections,
         winnScreenOn, setWinnScreenOn,
-        currentBoxButtonsOn, setCurrentBoxButtonsOn,
         playersLife, setPlayersLife,
-        currentBoxButtonsResolved, setCurrentBoxButtonsResolved
+        boxButtonStyle,setBoxButtonStyle
     }}>
         { children }
     </MyContext.Provider>

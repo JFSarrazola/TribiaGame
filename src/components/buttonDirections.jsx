@@ -3,10 +3,12 @@ import { MyContext } from "../context/myContext";
 
 export const ButtonDirections = () => {
 
-  const { directions, setDirections, setCurrentBoxButtonsOn } = useContext(MyContext);
+  const { directions, setDirections, setBoxButtonStyle, boxButtonStyle } = useContext(MyContext);
+
+  
     const onclickDirections = ({ target })=>{
 
-      // Esta funcion verifica si la propiedad directionsQuantity es menor a dos si lo es significa que directions tiene una
+      // Esta funcion verifica si la propiedad directionsQuantity es menor a dos, si lo es significa que directions tiene una
       // propiedad llamada newButtonBox por lo que simplemente agregara su valor a currentBoxButtonsOn.
 
       // Si currentBoxButtonsOn es mayor a 1 significa que hay más de una ruta que el jugador puede tomar y directions
@@ -15,19 +17,19 @@ export const ButtonDirections = () => {
 
       const { newButtonBox, directionsQuantity,downButtonBox,rightButtonBox,upButtonBox,leftButtonBox } = directions;
 
-      if( directionsQuantity < 2 ) { setCurrentBoxButtonsOn( {...newButtonBox } ) }
+      if( directionsQuantity < 2 ) { setBoxButtonStyle( {...boxButtonStyle,currentBoxButtonsOn:newButtonBox } ) }
 
       else{
 
         switch( target.id ){
 
-          case 'upButton' : setCurrentBoxButtonsOn( {...upButtonBox } );break;
+          case 'upButton' : setBoxButtonStyle( {...boxButtonStyle,currentBoxButtonsOn:upButtonBox} );break;
 
-          case 'leftButton' : setCurrentBoxButtonsOn( {...leftButtonBox } );break;
+          case 'leftButton' : setBoxButtonStyle( {...boxButtonStyle,currentBoxButtonsOn:leftButtonBox } );break;
 
-          case 'rightButton' : setCurrentBoxButtonsOn( {...rightButtonBox } );break;
+          case 'rightButton' : setBoxButtonStyle( {...boxButtonStyle,currentBoxButtonsOn:rightButtonBox } );break;
 
-          case 'downButton' : setCurrentBoxButtonsOn( {...downButtonBox } );break;
+          case 'downButton' : setBoxButtonStyle( {...boxButtonStyle,currentBoxButtonsOn:downButtonBox } );break;
 
         }
 
