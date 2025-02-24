@@ -1,5 +1,7 @@
 {
-  "homepage":"https://github.com/JFSarrazola/TribiaGame.git",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",  
+  "homepage": "https://github.com/JFSarrazola/TribiaGame.git",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
@@ -12,13 +14,12 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-"scripts": {
-  "start": "react-scripts start",
-  "build": "react-scripts build",
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
-}
-,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -38,6 +39,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.2.0"
+    "gh-pages": "^6.3.0"
   }
 }
