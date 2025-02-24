@@ -1,7 +1,7 @@
 {
+  "homepage": "https://github.com/JFSarrazola/TribiaGame.git",
   "predeploy": "npm run build",
   "deploy": "gh-pages -d build",  
-  "homepage": "https://github.com/JFSarrazola/TribiaGame.git",
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
