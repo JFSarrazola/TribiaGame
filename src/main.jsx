@@ -14,19 +14,13 @@ export const Main = () => {
   return (
 
     <MyProvider>
-    
         <WinLoseScreen/>
-
         <Modal/>
-      
         <div className='table'>
-
             <ButtonBoxes/>
 
             <ButtonDirections/>
-            
-        </div>       
-
+        </div>      
     </MyProvider>
 
   )

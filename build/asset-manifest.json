@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.2f66acad.css",
-    "main.js": "/static/js/main.2e592be1.js",
-    "static/media/background.png": "/static/media/background.efa2ccf6024c86d7c5ef.png",
-    "static/media/win.png": "/static/media/win.a579895b4fd184f96326.png",
-    "static/media/lose.png": "/static/media/lose.bfd9a34170e94ae02c4e.png",
-    "static/media/imgDirectionContainer.png": "/static/media/imgDirectionContainer.3de4df6f9507a2cd885e.png",
-    "static/media/arrowDown.png": "/static/media/arrowDown.c5797e3b1d3230105a0b.png",
-    "static/media/arrowUp.png": "/static/media/arrowUp.cae9c102530e02147c54.png",
-    "static/media/arrowRight.png": "/static/media/arrowRight.4bfd6612d6134ecd2f63.png",
-    "static/media/arrowLeft.png": "/static/media/arrowLeft.71e81376c4e8c65cb2e3.png",
-    "static/media/keyButtonResolved.jpg": "/static/media/keyButtonResolved.01504cfde3001e2a41af.jpg",
-    "static/media/keyButtonCurrent.jpg": "/static/media/keyButtonCurrent.30915cd28bf0e05fdb5b.jpg",
-    "index.html": "/index.html",
-    "main.2f66acad.css.map": "/static/css/main.2f66acad.css.map",
-    "main.2e592be1.js.map": "/static/js/main.2e592be1.js.map"
+    "main.css": "/JFSarrazola/TribiaGame.git/static/css/main.7816c767.css",
+    "main.js": "/JFSarrazola/TribiaGame.git/static/js/main.c7191cde.js",
+    "static/media/background.png": "/JFSarrazola/TribiaGame.git/static/media/background.efa2ccf6024c86d7c5ef.png",
+    "static/media/win.png": "/JFSarrazola/TribiaGame.git/static/media/win.a579895b4fd184f96326.png",
+    "static/media/lose.png": "/JFSarrazola/TribiaGame.git/static/media/lose.bfd9a34170e94ae02c4e.png",
+    "static/media/imgDirectionContainer.png": "/JFSarrazola/TribiaGame.git/static/media/imgDirectionContainer.3de4df6f9507a2cd885e.png",
+    "static/media/arrowDown.png": "/JFSarrazola/TribiaGame.git/static/media/arrowDown.c5797e3b1d3230105a0b.png",
+    "static/media/arrowUp.png": "/JFSarrazola/TribiaGame.git/static/media/arrowUp.cae9c102530e02147c54.png",
+    "static/media/arrowRight.png": "/JFSarrazola/TribiaGame.git/static/media/arrowRight.4bfd6612d6134ecd2f63.png",
+    "static/media/arrowLeft.png": "/JFSarrazola/TribiaGame.git/static/media/arrowLeft.71e81376c4e8c65cb2e3.png",
+    "static/media/keyButtonResolved.jpg": "/JFSarrazola/TribiaGame.git/static/media/keyButtonResolved.01504cfde3001e2a41af.jpg",
+    "static/media/keyButtonCurrent.jpg": "/JFSarrazola/TribiaGame.git/static/media/keyButtonCurrent.30915cd28bf0e05fdb5b.jpg",
+    "index.html": "/JFSarrazola/TribiaGame.git/index.html",
+    "main.7816c767.css.map": "/JFSarrazola/TribiaGame.git/static/css/main.7816c767.css.map",
+    "main.c7191cde.js.map": "/JFSarrazola/TribiaGame.git/static/js/main.c7191cde.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f66acad.css",
-    "static/js/main.2e592be1.js"
+    "static/css/main.7816c767.css",
+    "static/js/main.c7191cde.js"
   ]
 }
